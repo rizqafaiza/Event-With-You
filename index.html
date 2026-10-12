@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event With You | Wedding, Birthday, Seminar, Corporate Event</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-cream: #fffefb;
+      --color-mist: #c8d1d9;
+      --color-mist-dark: #aeb9c4;
+      --color-ink: #1c1c24;
+      --font-display: "DM Serif Display", serif;
+      --font-times: "Times New Roman", Times, serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="sticky top-0 z-30 border-b border-ink/10 bg-cream/95 backdrop-blur">
+    <nav class="relative mx-auto flex max-w-6xl items-center justify-between px-5 py-3" aria-label="Navigasi utama">
+      <a href="index.html" class="font-display text-xl">Event With You</a>
+
+      <input id="menu-toggle" type="checkbox" class="peer sr-only" />
+      <label for="menu-toggle" class="cursor-pointer text-xl peer-focus-visible:outline-2 peer-focus-visible:outline-ink md:hidden" aria-label="Buka menu">&#9776;</label>
+
+      <ul class="absolute left-0 top-full hidden w-full flex-col gap-3 bg-cream px-5 py-4 peer-checked:flex md:static md:flex md:w-auto md:flex-row md:gap-8 md:p-0">
+        <li><a href="index.html" data-nav="beranda" aria-current="page" class="underline underline-offset-4">Beranda</a></li>
+        <li><a href="index.html#layanan" data-nav="layanan" class="underline-offset-4 hover:underline">Layanan</a></li>
+        <li><a href="portofolio.html" class="underline-offset-4 hover:underline">Galeri</a></li>
+        <li><a href="kalkulator.html" class="underline-offset-4 hover:underline">Kalkulator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="relative flex min-h-[70vh] scroll-mt-16 items-center bg-ink bg-cover bg-center" style="background-image: url(assets/images/Header.jpeg)">
+      <div class="absolute inset-0 bg-ink/50"></div>
+      <div class="relative mx-auto w-full max-w-6xl px-5 text-cream">
+        <h1 class="max-w-xl text-4xl leading-tight md:text-6xl">Turn Your Moments Into Magics With Us</h1>
+        <p class="mt-4 text-lg">Wedding, Birthday, Seminar, Corporate Event</p>
+        <a href="portofolio.html" class="btn mt-8">Lihat Portofolio</a>
+      </div>
+    </section>
+
+    <section id="layanan" class="mx-auto max-w-6xl scroll-mt-16 px-5 py-20">
+      <h2 class="mx-auto max-w-xl border-t border-ink pt-10 text-center text-3xl leading-snug md:text-4xl lg:text-[2.5rem]">
+        Solusi Acara Komprehensif Sesuai Kebutuhan Anda
+      </h2>
+
+      <div class="mt-16 space-y-20">
+
+        <article class="text-center" id="layanan-wedding">
+          <h3 class="text-2xl md:text-[1.75rem] lg:relative lg:top-[24px]">Wedding</h3>
+          <div class="mt-2 lg:-mt-10 flex flex-col items-center gap-10 md:flex-row">
+            <div class="relative shrink-0">
+              <span aria-hidden="true" class="absolute -bottom-4 -left-6 size-60 rounded-full bg-mist-dark md:size-80 lg:size-96"></span>
+              <img src="assets/images/services/wedding.jpg" alt="Dokumentasi Wedding" loading="lazy" class="relative size-60 rounded-full bg-mist/40 object-cover md:size-80 lg:size-96" />
+            </div>
+            <div class="flex-1">
+              <p class="border-y border-ink py-6 text-base leading-relaxed lg:text-lg">Sempurnakan momen istimewa Anda bersama kami. Layanan wedding organizer profesional yang mengurus perencanaan, konsep visual, hingga eksekusi acara presisi dan penuh kehangatan.</p>
+              <div class="mt-6 flex justify-center gap-3">
+                <a href="booking.html?jenis=wedding" class="btn">Pesan &gt;</a>
+                <a href="portofolio.html#wedding" class="btn">Lihat Portofolio &gt;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="text-center" id="layanan-birthday">
+          <h3 class="text-2xl md:text-[1.75rem] lg:relative lg:top-[24px]">Birthday</h3>
+          <div class="mt-2 lg:-mt-10 flex flex-col items-center gap-10 md:flex-row-reverse">
+            <div class="relative shrink-0">
+              <span aria-hidden="true" class="absolute -bottom-4 -right-6 size-60 rounded-full bg-mist-dark md:size-80 lg:size-96"></span>
+              <img src="assets/images/services/birthday.jpg" alt="Dokumentasi Birthday" loading="lazy" class="relative size-60 rounded-full bg-mist/40 object-cover md:size-80 lg:size-96" />
+            </div>
+            <div class="flex-1">
+              <p class="border-y border-ink py-6 text-base leading-relaxed lg:text-lg">Setiap ulang tahun adalah momen berharga. Kami mengelola tema pesta, hiburan, hingga katering untuk memastikan Anda dan para tamu dapat menikmati perayaan tanpa khawatir.</p>
+              <div class="mt-6 flex flex-row-reverse justify-center gap-3">
+                <a href="booking.html?jenis=birthday" class="btn">Pesan &gt;</a>
+                <a href="portofolio.html#birthday" class="btn">Lihat Portofolio &gt;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="text-center" id="layanan-seminar">
+          <h3 class="text-2xl md:text-[1.75rem] lg:relative lg:top-[24px]">Seminar</h3>
+          <div class="mt-2 lg:-mt-10 flex flex-col items-center gap-10 md:flex-row">
+            <div class="relative shrink-0">
+              <span aria-hidden="true" class="absolute -bottom-4 -left-6 size-60 rounded-full bg-mist-dark md:size-80 lg:size-96"></span>
+              <img src="assets/images/services/seminar.jpg" alt="Dokumentasi Seminar" loading="lazy" class="relative size-60 rounded-full bg-mist/40 object-cover md:size-80 lg:size-96" />
+            </div>
+            <div class="flex-1">
+              <p class="border-y border-ink py-6 text-base leading-relaxed lg:text-lg">Ciptakan pengalaman edukatif dan interaktif bagi peserta Anda. Kami mengurus seluruh kebutuhan teknis dan logistik seminar, baik secara tatap muka (offline) maupun hybrid.</p>
+              <div class="mt-6 flex justify-center gap-3">
+                <a href="booking.html?jenis=seminar" class="btn">Pesan &gt;</a>
+                <a href="portofolio.html#seminar" class="btn">Lihat Portofolio &gt;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="text-center" id="layanan-corporate">
+          <h3 class="text-2xl md:text-[1.75rem] lg:relative lg:top-[24px]">Corporate Event</h3>
+          <div class="mt-2 lg:-mt-10 flex flex-col items-center gap-10 md:flex-row-reverse">
+            <div class="relative shrink-0">
+              <span aria-hidden="true" class="absolute -bottom-4 -right-6 size-60 rounded-full bg-mist-dark md:size-80 lg:size-96"></span>
+              <img src="assets/images/services/corporate.jpg" alt="Dokumentasi Corporate Event" loading="lazy" class="relative size-60 rounded-full bg-mist/40 object-cover md:size-80 lg:size-96" />
+            </div>
+            <div class="flex-1">
+              <p class="border-y border-ink py-6 text-base leading-relaxed lg:text-lg">Hubungkan tim dan mitra bisnis Anda dalam acara yang berkesan. Kami membantu mendesain corporate gathering dan acara apresiasi perusahaan yang inspiratif, terstruktur, dan lancar.</p>
+              <div class="mt-6 flex flex-row-reverse justify-center gap-3">
+                <a href="booking.html?jenis=corporate" class="btn">Pesan &gt;</a>
+                <a href="portofolio.html#corporate" class="btn">Lihat Portofolio &gt;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10 bg-mist/40">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm md:flex-row">
+      <p class="font-display text-lg">Event With You</p>
+      <ul class="flex flex-wrap justify-center gap-6">
+        <li><a href="index.html" class="underline-offset-4 hover:underline">Beranda</a></li>
+        <li><a href="index.html#layanan" class="underline-offset-4 hover:underline">Layanan</a></li>
+        <li><a href="portofolio.html" class="underline-offset-4 hover:underline">Galeri</a></li>
+        <li><a href="kalkulator.html" class="underline-offset-4 hover:underline">Kalkulator</a></li>
+        <li><a href="booking.html" class="underline-offset-4 hover:underline">Booking</a></li>
+      </ul>
+      <p>&copy; 2026 Event With You</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var links = document.querySelectorAll('[data-nav]');
+      var layanan = document.getElementById('layanan');
+      function setActive(id) {
+        links.forEach(function (a) {
+          var on = a.dataset.nav === id;
+          a.classList.toggle('underline', on);
+          if (on) a.setAttribute('aria-current', 'page');
+          else a.removeAttribute('aria-current');
+        });
+      }
+      function onScroll() {
+        setActive(layanan.getBoundingClientRect().top <= 120 ? 'layanan' : 'beranda');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

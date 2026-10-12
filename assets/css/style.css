@@ -1,0 +1,52 @@
+
+:root {
+  --cream: #fffefb;      
+  --mist: #c8d1d9;       
+  --mist-dark: #aeb9c4;  
+  --ink: #1c1c24;        
+
+  --font-display: "DM Serif Display", serif;                               
+  --font-body: "Times New Roman", Times, serif;                            
+  --font-button: "Source Serif 4", "Source Serif Pro", Georgia, serif;     
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+h1, h2 { font-family: var(--font-display); font-weight: 400; }
+h3 { font-family: var(--font-body); font-weight: 400; }
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-button);
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.15);
+  transition: background 0.2s;
+}
+.btn:hover { background: var(--mist-dark); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.btn-lg { padding: 0.75rem 1.25rem; }
+
+.field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgb(28 28 36 / 0.4);
+  border-radius: 0.5rem;
+  background: #fff;
+  font: inherit;
+}
+.field:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
