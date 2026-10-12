@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pemesanan</title>
+    <link rel="stylesheet" href="pemesanan.css">
+  </head>
+  <body class="bg-[#fffefb] font-serif w-screen">
+    <header>
+      <h1 class="text-5xl font-bold text-center">Estimasi Biaya dan Pemesanan</h1>
+    </header>
+
+    <br/>
+
+    <main>
+      <section>
+        <h2 class="text-3xl font-bold text-center">Kalkulator Estimasi Biaya</h2>
+
+        <div class="w-full min-h-200 relative p-px md:p-5 lg:p-5">
+          <div class="w-md h-80 rounded-full bg-[#c8d1d9] absolute left-10 z-0"></div>
+          <div class="w-md h-80 rounded-full bg-[#c8d1d9] absolute right-15 top-160 md:top-50 lg:top-40 z-0"></div>
+
+          <form action="" class="bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-10 shadow-xl">
+            <p class="w-full font-bold">1. Jenis Acara</p>
+            <select name="" id="" class="bg-[#f3f3f3] w-full border-2 border-[#808080] rounded-md">
+              <option value="Pernikahan">Pernikahan</option>
+              <option value="Ulang Tahun">Ulang Tahun</option>
+              <option value="Seminar">Seminar</option>
+              <option value="Korporat">Korporat</option>
+            </select>
+
+            <p class="w-full font-bold">2. Tingkat Paket</p>
+            <div class="flex gap-5 lg:gap-20 w-full justify-center flex-col md:flex-row md:gap-5 lg:flex-row lg:gap-20">
+              <button type="button" class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl lg:px-15 py-3 md:px-5">Basic</button>
+              <button type="button" class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl lg:px-15 py-3 md:px-5">Premium</button>
+              <button type="button" class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl lg:px-15 py-3 md:px-5">Exclusive</button>
+            </div>
+
+            <div class="flex gap-10 wrap flex-col lg:flex-row md:flex-col md:gap-10 md:w-full lg:gap-20">
+              <div>
+                <p class="font-bold">3. Jumlah Tamu Undangan</p>
+                <input type="number" name="jumlah" min="50" step="10" value="50" class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-1 lg:px-8 py-3 md:w-full">
+              </div>
+              <div class="w-full lg:w-3/5">
+                <p class="font-bold">4. Layanan Tambahan (opsional)</p>
+                <div class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
+                flex-col md:flex-row lg:flex-row wrap gap-5 lg:gap-15">
+                  <input type="checkbox" name="tambahan" value="upgrade-catering">Upgrade Catering Buffet Premium
+                  <p class="font-bold">+Rp85.000 / tamu</p>
+                </div>
+
+                <div class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
+                flex-col md:flex-row lg:flex-row wrap gap-5 lg:gap-15">
+                  <input type="checkbox" name="tambahan" value="live-music">Live Music Band & DJ Performance
+                  <p class="font-bold">+Rp7.500.000</p>
+                </div>
+
+                <div class="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
+                flex-col md:flex-row lg:flex-row wrap gap-5 lg:gap-15">
+                  <input type="checkbox" name="tambahan" value="drone">Dokumentasi Drone Aerial 4K
+                  <p class="font-bold">+Rp3.500.000</p>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-center">Estimasi Biaya</h2>
+
+        <div class="w-full h-150 relative p-px lg:p-5">
+          <div class="w-md h-80 rounded-full bg-[#c8d1d9] absolute left-10 z-0"></div>
+          <div class="w-md h-80 rounded-full bg-[#c8d1d9] absolute right-15 top-40 z-0"></div>
+
+          <div class="bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-10 shadow-xl">
+            <h3 class="font-bold text-2xl">Total Estimasi Anggaran</h3>
+            <p class="font-bold flex justify-between">
+              <span>Paket Basic</span>
+              <span>Rp 15.000.000</span>
+            </p>
+
+            <br/>
+
+            <p class="font-bold flex justify-between">
+              <span>Biaya Tamu (50 x Rp 50.000)</span>
+              <span>Rp 2.500.000</span>
+            </p>
+
+            <br/>
+
+            <p class="font-bold flex justify-between">
+              <span>Total Tambahan</span>
+              <span>Rp 0</span>
+            </p>
+
+            <hr class="border-2">
+
+            <h3 class="font-bold text-2xl">Perkiraan Biaya Keseluruhan:</h3>
+            <p class="font-bold text-3xl">Rp 17.500.000</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-10">
+        <h2 class="text-3xl font-bold text-center">Buat Pesanan</h2>
+        
+        <form action="" class="bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-3 md:p-10 lg:p-10 shadow-xl">
+          <div class="flex flex-wrap gap-5 lg:gap-10 w-full justify-center">
+            <div class="flex flex-col w-full lg:w-100">
+              <label for="nama" class="font-bold">Nama Lengkap*</label>
+              <input type="text" name="nama" required placeholder="Nama Lengkap" id="nama" 
+              class="bg-[#f3f3f3] border-2 border-[#808080] rounded-lg h-10 w-full lg:w-100">
+            </div>
+
+            <div class="flex flex-col w-full lg:w-100">
+              <label for="jenis" class="font-bold">Jenis Acara*</label>
+              <select name="jenis" id="jenis" class="bg-[#f3f3f3] h-10 w-full lg:w-100 border-2 border-[#808080] rounded-md" required>
+              <option value="Pernikahan">Pernikahan</option>
+              <option value="Ulang Tahun">Ulang Tahun</option>
+              <option value="Seminar">Seminar</option>
+              <option value="Korporat">Korporat</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col w-full lg:w-100">
+            <label for="telepon" class="font-bold">Nomor Telepon*</label>
+            <input type="tel" id="telepon" required placeholder="Nomor Telepon"
+            class="bg-[#f3f3f3] h-10 w-full lg:w-100 border-2 border-[#808080] rounded-md">
+          </div>
+
+          <div class="flex flex-col w-full lg:w-100">
+            <label for="tamu" class="font-bold">Jumlah Tamu*</label>
+            <input type="number" name="jumlah" min="50" step="10" value="50" required placeholder="Jumlah Tamu" id="tamu"
+            class="bg-[#f3f3f3] h-10 w-full lg:w-100 border-2 border-[#808080] rounded-md">
+          </div>
+
+          <div class="flex flex-col w-full lg:w-100">
+            <label for="tanggal" class="font-bold">Tanggal Acara*</label>
+            <input type="datetime-local" id="tanggal" required placeholder="Tanggal Acara" 
+            class="bg-[#f3f3f3] h-10 w-full lg:w-100 border-2 border-[#808080] rounded-md">
+          </div>
+
+          <div class="flex flex-col w-full lg:w-100">
+            <label for="paket" class="font-bold">Pilihan Paket Layanan*</label>
+            <select name="paket" id="paket" required class="bg-[#f3f3f3] h-10 w-full lg:w-100 border-2 border-[#808080] rounded-md">
+              <option value="Basic">Basic</option>
+              <option value="Premium">Premium</option>
+              <option value="Exclusive">Exclusive</option>
+            </select>
+          </div>
+          </div>
+
+          <div class="w-full p-5 lg:p-20">
+            <label for="pesan" class="font-bold">Catatan/Pesan Khusus</label>
+            <textarea name="pesan" id="pesan" rows="4" class="bg-[#f3f3f3] h-30 w-full border-2 border-[#808080] rounded-md"></textarea>
+          </div>
+
+          <div class="flex justify-center">
+            <button type="submit" class="w-4/5 h-10 bg-[#c8d1d9] rounded-xl shadow-xl font-bold">
+              Kirim Permintaan Pesanan</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
