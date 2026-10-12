@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Karya</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portofolio Event With You</title>
+    <link rel="stylesheet" href="assets/css/portofolio.css">
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-
-    <header class="header">
-        <a href="index.html" class="logo">Ruang Acara</a>
-
-        <nav class="navigasi">
-            <a href="index.html">Beranda</a>
-            <a href="galeri.html" class="aktif">Galeri Karya</a>
-            <a href="tentang.html">Tentang Kami</a>
-            <a href="kontak.html">Kontak</a>
-        </nav>
-
-        <button class="menu-toggle" aria-label="Buka menu">☰</button>
-    </header>
 
     <main class="galeri">
         <section class="pembuka">
