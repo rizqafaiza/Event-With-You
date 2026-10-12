@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Karya</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Ruang Acara</a>
+
+        <nav class="navigasi">
+            <a href="index.html">Beranda</a>
+            <a href="galeri.html" class="aktif">Galeri Karya</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Buka menu">☰</button>
+    </header>
+
+    <main class="galeri">
+        <section class="pembuka">
+            <h3>Galeri Karya</h3>
+            <h1>Portofolio Event Terbaik<br>Kami</h1>
+
+            <p>
+                Setiap foto menyimpan cerita tentang dedikasi, tawa,
+                dan kebahagiaan. Sambut inspirasi acara impian Anda
+                dengan melihat kembali berbagai perayaan istimewa
+                yang telah kami selenggarakan.
+            </p>
+
+            <div class="filter">
+                <button class="aktif" data-filter="semua">Semua</button>
+                <button data-filter="pernikahan">Pernikahan</button>
+                <button data-filter="ulangtahun">Ulang Tahun</button>
+                <button data-filter="seminar">Seminar</button>
+                <button data-filter="perusahaan">Perusahaan</button>
+            </div>
+        </section>
+
+        <section class="kategori">
+            <h2>Pernikahan</h2>
+            <div class="kumpulan-foto">
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan1.png" alt="Dekorasi pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan2.png" alt="Pelaminan pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan3.png" alt="Meja resepsi pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan4.png" alt="Resepsi pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan5.png" alt="Dekorasi bunga pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan6.png" alt="Meja tamu pernikahan"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan7.png" alt="Area resepsi"></button>
+                <button class="foto" data-kategori="pernikahan"><img src="assets/images/pernikahan8.png" alt="Dekorasi acara pernikahan"></button>
+            </div>
+        </section>
+
+        <section class="kategori">
+            <h2>Ulang Tahun</h2>
+            <div class="kumpulan-foto">
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun1.png" alt="Dekorasi ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun2.png" alt="Pesta balon ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun3.png" alt="Perayaan ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun4.png" alt="Pesta ulang tahun di taman"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun5.png" alt="Meja kue ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun6.png" alt="Dekorasi pesta ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun7.png" alt="Jamuan ulang tahun"></button>
+                <button class="foto" data-kategori="ulangtahun"><img src="assets/images/ulangtahun8.png" alt="Perayaan bersama teman"></button>
+            </div>
+        </section>
+
+        <section class="kategori">
+            <h2>Seminar</h2>
+            <div class="kumpulan-foto">
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar1.png" alt="Seminar di aula"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar2.png" alt="Peserta seminar"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar3.png" alt="Konferensi seminar"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar4.png" alt="Pembicara seminar"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar5.png" alt="Kegiatan seminar"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar6.png" alt="Ruang konferensi"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar7.png" alt="Presentasi seminar"></button>
+                <button class="foto" data-kategori="seminar"><img src="assets/images/seminar8.png" alt="Diskusi peserta seminar"></button>
+            </div>
+        </section>
+
+        <section class="kategori">
+            <h2>Acara Perusahaan</h2>
+            <div class="kumpulan-foto">
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan1.png" alt="Jamuan perusahaan"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan2.png" alt="Pertemuan perusahaan"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan3.png" alt="Meja acara perusahaan"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan4.png" alt="Acara resmi perusahaan"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan5.png" alt="Dekorasi acara perusahaan"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan6.png" alt="Jamuan makan malam"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan7.png" alt="Acara perusahaan di aula"></button>
+                <button class="foto" data-kategori="perusahaan"><img src="assets/images/perusahaan8.png" alt="Pesta perusahaan"></button>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="tutup" aria-label="Tutup foto">&times;</button>
+        <img id="foto-besar" src="" alt="Foto yang diperbesar">
+    </div>
+
+    <footer>
+        © 2026 Ruang Acara. Semua hak dilindungi.
+    </footer>
+
+</body>
+</html>
