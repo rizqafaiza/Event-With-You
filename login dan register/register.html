@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun - Event Organizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fa;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .auth-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 420px;
+            border: 1px solid #eaeaea;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .auth-header p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #2f3640;
+            background-color: #fafbfc;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2c3e50;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.08);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 13px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #333333;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .auth-footer a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #95a5a6;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card">
+        <div class="auth-header">
+            <h1>Buat Akun Baru</h1>
+            <p>Daftar untuk mulai merencanakan momen impian Anda</p>
+        </div>
+
+        <form action="proses-register.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Aktif</label>
+                <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon / WhatsApp</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Buat password aman" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Daftar Sekarang</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+        </div>
+        
+        <a href="index.html" class="back-link">← Kembali ke Beranda Utama</a>
+    </div>
+
+</body>
+</html>
