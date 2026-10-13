@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 * {
     margin: 0;
@@ -7,80 +7,103 @@
 }
 
 body {
-    background-color: #fffdfa;
-    color: #171717;
-    font-family: "Times New Roman", serif;
+    background: #fffefb;
+    color: #1c1c24;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 7%;
-    border-bottom: 1px solid #dedede;
-    background-color: #fffdfa;
+    border-bottom: 1px solid #1c1c2420;
+    background: rgba(255, 254, 251, 0.96);
+    backdrop-filter: blur(8px);
 }
 
-.logo {
-    font-size: 17px;
-    font-weight: bold;
-    color: #171717;
+.logo,
+.footer-dalam > a {
+    color: #1c1c24;
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
     text-decoration: none;
-}
-
-.navigasi {
-    display: flex;
-    gap: 20px;
-}
-
-.navigasi a {
-    text-decoration: none;
-    color: #171717;
-    font-size: 12px;
-}
-
-.navigasi a:hover,
-.navigasi a.aktif {
-    text-decoration: underline;
 }
 
 .menu-toggle {
-    display: none;
+    display: block;
     border: none;
-    background: none;
-    font-size: 22px;
+    background: transparent;
+    color: #1c1c24;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navigasi {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 175px;
+    padding: 18px;
+    border: 1px solid #1c1c2420;
+    background: #fffefb;
+    z-index: 40;
+}
+
+.navigasi.buka {
+    display: flex;
+}
+
+.navigasi a,
+.footer-links a {
+    color: #1c1c24;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.navigasi a:hover,
+.navigasi a.aktif,
+.footer-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .galeri {
     width: 90%;
     max-width: 850px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .pembuka {
-    max-width: 100%;
-    margin: 25px auto 30px;
+    max-width: 440px;
+    margin: 35px auto 38px;
     text-align: center;
 }
 
 .pembuka h3 {
-    font-size: 40px;
     margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .pembuka h1 {
-    font-size: 50px;
-    line-height: 1.05;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #777;
     display: inline-block;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #1c1c24;
+    font-size: 30px;
+    line-height: 1.08;
 }
 
 .pembuka p {
-    font-size: 16px;
-    line-height: 1.5;
+    max-width: 390px;
     margin: 0 auto;
-    max-width: 330px;
+    font-size: 12px;
+    line-height: 1.6;
 }
 
 .filter {
@@ -88,50 +111,51 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    max-width: 300px;
-    margin: 15px auto 0;
+    margin: 18px auto 0;
 }
 
 .filter button {
+    padding: 8px 17px;
     border: none;
-    background: #dce2e5;
-    color: #171717;
-    border-radius: 20px;
-    padding: 6px 17px;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
+    border-radius: 22px;
+    background: #e0e5e8;
+    color: #1c1c24;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
     cursor: pointer;
-    box-shadow: 0 2px 5px #00000018;
 }
 
 .filter button:hover,
 .filter button.aktif {
-    background: #bcc8cf;
+    background: #c8d1d9;
 }
 
 .kategori {
-    margin-bottom: 42px;
+    margin-bottom: 45px;
+    scroll-margin-top: 90px;
 }
 
 .kategori h2 {
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: 19px;
     text-align: center;
-    margin-bottom: 13px;
 }
 
 .kumpulan-foto {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px 12px;
+    gap: 12px;
 }
 
 .foto {
-    border: none;
-    padding: 0;
-    background: transparent;
+    display: block;
+    width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: 4px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
     cursor: pointer;
 }
 
@@ -140,11 +164,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.2s ease;
+    transition: transform 0.25s ease;
 }
 
 .foto:hover img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .foto.sembunyi {
@@ -170,77 +194,123 @@ body {
     max-width: 90%;
     max-height: 85vh;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .tutup {
     position: absolute;
-    top: 15px;
+    top: 12px;
     right: 25px;
     border: none;
-    background: none;
+    background: transparent;
     color: white;
-    font-size: 38px;
+    font-size: 40px;
     cursor: pointer;
 }
 
 footer {
-    text-align: center;
-    padding: 18px;
-    font-size: 10px;
-    border-top: 1px solid #eee;
-    background-color: #c8d1d9;
+    margin-top: 25px;
+    border-top: 1px solid #1c1c241a;
+    background: rgba(200, 209, 217, 0.4);
+}
+
+.footer-dalam {
+    display: flex;
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 28px 5%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-dalam > a {
+    font-size: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-dalam p {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-right: max(7%, calc((100% - 1152px) / 2));
+        padding-left: max(7%, calc((100% - 1152px) / 2));
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navigasi {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 28px;
+        min-width: auto;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
 }
 
 @media (max-width: 600px) {
     .header {
-        padding: 12px 5%;
+        padding: 13px 5%;
     }
 
     .logo {
-        font-size: 14px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navigasi {
-        display: none;
-        position: absolute;
-        top: 45px;
-        left: 0;
-        width: 100%;
-        padding: 15px 5%;
-        background: #fffdfa;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 10;
-    }
-
-    .navigasi.buka {
-        display: flex;
+        font-size: 17px;
     }
 
     .galeri {
-        width: 90%;
-        max-width: 400px;
+        width: 92%;
     }
 
     .pembuka {
-        margin-top: 15px;
-        margin-bottom: 27px;
+        margin: 27px auto 30px;
     }
 
     .pembuka h1 {
-        font-size: 23px;
+        font-size: 25px;
     }
 
-    .kategori {
-        margin-bottom: 39px;
+    .pembuka p {
+        font-size: 11px;
+    }
+
+    .filter {
+        gap: 7px;
+    }
+
+    .filter button {
+        padding: 7px 12px;
+        font-size: 11px;
     }
 
     .kumpulan-foto {
-        gap: 9px 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .kategori {
+        margin-bottom: 35px;
+    }
+
+    .footer-dalam {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        gap: 14px;
     }
 }
