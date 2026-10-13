@@ -58,18 +58,18 @@ body {
 }
 
 .pembuka {
-    max-width: 420px;
+    max-width: 100%;
     margin: 25px auto 30px;
     text-align: center;
 }
 
 .pembuka h3 {
-    font-size: 12px;
+    font-size: 40px;
     margin-bottom: 8px;
 }
 
 .pembuka h1 {
-    font-size: 27px;
+    font-size: 50px;
     line-height: 1.05;
     margin-bottom: 10px;
     border-bottom: 1px solid #777;
@@ -77,7 +77,7 @@ body {
 }
 
 .pembuka p {
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1.5;
     margin: 0 auto;
     max-width: 330px;
@@ -99,7 +99,7 @@ body {
     border-radius: 20px;
     padding: 6px 17px;
     font-family: "Times New Roman", serif;
-    font-size: 8px;
+    font-size: 16px;
     cursor: pointer;
     box-shadow: 0 2px 5px #00000018;
 }
@@ -189,6 +189,7 @@ footer {
     padding: 18px;
     font-size: 10px;
     border-top: 1px solid #eee;
+    background-color: #c8d1d9;
 }
 
 @media (max-width: 600px) {
