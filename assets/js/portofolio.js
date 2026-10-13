@@ -3,7 +3,24 @@ const navigasi = document.querySelector(".navigasi");
 
 if (tombolMenu && navigasi) {
     tombolMenu.addEventListener("click", function () {
-        navigasi.classList.toggle("buka");
+        const terbuka = navigasi.classList.toggle("buka");
+
+        tombolMenu.setAttribute("aria-expanded", terbuka);
+        tombolMenu.setAttribute(
+            "aria-label",
+            terbuka ? "Tutup navigasi" : "Buka navigasi"
+        );
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !navigasi.contains(event.target) &&
+            !tombolMenu.contains(event.target)
+        ) {
+            navigasi.classList.remove("buka");
+            tombolMenu.setAttribute("aria-expanded", "false");
+            tombolMenu.setAttribute("aria-label", "Buka navigasi");
+        }
     });
 }
 
@@ -63,16 +80,18 @@ function tutupFoto() {
     fotoBesar.src = "";
 }
 
-tombolTutup.addEventListener("click", tutupFoto);
+if (tombolTutup && lightbox) {
+    tombolTutup.addEventListener("click", tutupFoto);
 
-lightbox.addEventListener("click", function (event) {
-    if (event.target === lightbox) {
-        tutupFoto();
-    }
-});
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+            tutupFoto();
+        }
+    });
 
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        tutupFoto();
-    }
-});
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            tutupFoto();
+        }
+    });
+}
