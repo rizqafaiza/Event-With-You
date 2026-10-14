@@ -180,3 +180,27 @@ if (jenisUrl && calcJenis) calcJenis.value = jenisUrl
  
 sinkronKePesanan()
 setPaket(state.paket)
+
+const book = document.getElementById('form-pesanan');
+const sukses = document.getElementById('modal-sukses');
+const tombolTutup = document.getElementById('tutup-modal');
+
+const bukaModal = () =>{
+  sukses.classList.remove('hidden');
+  sukses.classList.add('flex')
+  tombolTutup.focus();
+}
+
+const tutupModal = () =>{
+  sukses.classList.remove('flex')
+  sukses.classList.add('hidden')
+}
+
+book.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  bukaModal();
+  book.reset();
+})
+
+tombolTutup.addEventListener('click', tutupModal);
