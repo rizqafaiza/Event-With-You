@@ -1,18 +1,10 @@
-import {useState} from 'react'
-
-export default function FormKalkulator(){
-    const [data, setData] = useState({
-        jenis:"Pernikahan",
-        tingkat:"Basic",
-        tamu:"",
-        tambahan:[""]
-    });
+export default function FormKalkulator({data, setData}){
 
     function handleChange(e){
         if(e.target.type==="checkbox"){
             setData({
                 ...data, tambahan:e.target.checked ? 
-                [...data.tambahan, value] : data.tambahan.filter(item => item!==e.target.value)
+                [...data.tambahan, e.target.value] : data.tambahan.filter(item => item!==e.target.value)
             })
 
         } else {
@@ -25,7 +17,7 @@ export default function FormKalkulator(){
     return(
         <>
             <h2 className="text-3xl font-bold text-center mb-px">Kalkulator Estimasi Biaya</h2>
-            <form className='bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-10 shadow-xl'>
+            <form className='bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-10 shadow-xl mb-5'>
                 <p className="w-full font-bold">1. Jenis Acara</p>
                 <select 
                     name="jenis"
@@ -57,15 +49,17 @@ export default function FormKalkulator(){
                         <input 
                             type="number"
                             id="calc-tamu" 
+                            min={50}
+                            step={10}
                             name="tamu" 
                             value={Number(data.tamu)}
                             onChange={handleChange}
-                            className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-1 lg:px-5 py-3 md:w-full"/>
+                            className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-1 md:px-5 py-3 md:w-full"/>
                     </div>
                     <div className="w-full lg:w-3/5">
                         <p className="font-bold">4. Layanan Tambahan (opsional)</p>
                         <div className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
-                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-px">
+                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-2">
                             <input type="checkbox" 
                                 name="tambahan" 
                                 value="upgrade-catering"
@@ -75,7 +69,7 @@ export default function FormKalkulator(){
                         </div>
 
                         <div className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
-                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-px">
+                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-2">
                             <input 
                                 type="checkbox" 
                                 name="tambahan" 
