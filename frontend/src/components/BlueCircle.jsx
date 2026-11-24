@@ -1,9 +1,9 @@
-export default function BlueCircle({bottom, left, size, mdsize}){
+export default function BlueCircle({vertikal, horizontal, size, mdsize}){
     return (
-        <div className={`bg-[#aeb9c4] rounded-full absolute left-${left} bottom-${bottom} size-${size} md:size-${mdsize}`}>
+        <div className={`bg-[#aeb9c4] rounded-full absolute ${horizontal} ${vertikal} size-${size} md:size-${mdsize} z-0`}>
         </div>
     )
 }
 
 // cara pakai function ini:
-// <BlueCircle bottom={angka} left={angka} size={angka} mdsize={angka} />
+// <BlueCircle vertikal={"top/bottom-angka"} horizontal={"left/right-angka"} size={angka} mdsize={angka} indeks={angka} />

@@ -52,9 +52,9 @@ export default function FormKalkulator({data, setData}){
                             min={50}
                             step={10}
                             name="tamu" 
-                            value={Number(data.tamu)}
+                            value={data.tamu}
                             onChange={handleChange}
-                            className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-1 md:px-5 py-3 md:w-full"/>
+                            className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-1 md:px-5 py-3 w-4/5 md:w-4/5 box-border"/>
                     </div>
                     <div className="w-full lg:w-3/5">
                         <p className="font-bold">4. Layanan Tambahan (opsional)</p>

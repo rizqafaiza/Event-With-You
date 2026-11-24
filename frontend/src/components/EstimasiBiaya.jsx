@@ -18,7 +18,7 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
 
         data.tambahan.forEach((e) => {
             const item = harga.tambahan[e];
-            totalTambahan+= item.pertamu ? item.price * data.tamu : item.price
+            totalTambahan+= item.pertamu ? item.price * Number(data.tamu) : item.price
         });
 
         return totalTambahan;
@@ -26,14 +26,14 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
 
     function hitung(){
         const paket = harga.paket[data.tingkat];
-        const biayaTamu = paket.pertamu * data.tamu;
+        const biayaTamu = paket.pertamu * Number(data.tamu);
 
         const total = paket.dasar + biayaTamu + harga_tambahan();
 
         return total;
     }
 
-    const biaya_tamu = harga.paket[data.tingkat].pertamu * data.tamu;
+    const biaya_tamu = harga.paket[data.tingkat].pertamu * Number(data.tamu);
 
     return(
         <>
@@ -50,7 +50,7 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
                     <br/>
 
                     <p className="font-bold flex justify-between">
-                    <span id="out-tamu-label">Biaya Tamu ({data.tamu} x Rp {harga.paket[data.tingkat].pertamu})</span>
+                    <span id="out-tamu-label">Biaya Tamu ({Number(data.tamu)} x Rp {harga.paket[data.tingkat].pertamu})</span>
                     <span id="out-tamu">Rp {biaya_tamu.toLocaleString('id-ID')}</span>
                     </p>
 
@@ -67,7 +67,11 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
                     <p id="out-total" className="font-bold text-2xl md:text-3xl">Rp {hitung().toLocaleString('id-ID')}</p>
 
                     <div className="flex justify-center">
-                        <button className="font-bold bg-[#aeb9c4] rounded-2xl py-3 px-7 md:px-20 lg:px-60 mt-3">Gunakan Hasil Estimasi Ini</button>
+                        <button 
+                            type="button"
+                            onClick={gunakanEstimasi}
+                            className="font-bold bg-[#aeb9c4] rounded-2xl py-3 px-7 md:px-20 lg:px-60 mt-3">
+                        Gunakan Hasil Estimasi Ini</button>
                     </div>
                 </div>
 
