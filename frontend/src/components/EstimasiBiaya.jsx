@@ -39,7 +39,7 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
         <>
             <h2 className="text-3xl font-bold text-center">Estimasi Biaya</h2>
 
-            <div className="w-full h-150 relative p-px lg:p-5">
+            <div className="w-full min-h-150 relative p-px lg:p-5">
                 <div className="bg-[#ffffff] rounded-3xl relative z-1 w-3/4 mx-auto p-10 shadow-xl">
                     <h3 className="font-bold text-2xl">Total Estimasi Anggaran</h3>
                     <p className="font-bold flex justify-between">
@@ -70,7 +70,7 @@ export default function EstimasiBiaya({data, gunakanEstimasi}){
                         <button 
                             type="button"
                             onClick={gunakanEstimasi}
-                            className="font-bold bg-[#aeb9c4] rounded-2xl py-3 px-7 md:px-20 lg:px-60 mt-3">
+                            className="font-bold bg-[#c8d1d9] rounded-2xl py-3 px-7 md:px-20 lg:px-60 mt-3">
                         Gunakan Hasil Estimasi Ini</button>
                     </div>
                 </div>

@@ -59,7 +59,7 @@ export default function FormKalkulator({data, setData}){
                     <div className="w-full lg:w-3/5">
                         <p className="font-bold">4. Layanan Tambahan (opsional)</p>
                         <div className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
-                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-2">
+                            flex-col md:flex-row wrap gap-3 lg:gap-8 mb-2">
                             <input type="checkbox" 
                                 name="tambahan" 
                                 value="upgrade-catering"
@@ -69,7 +69,7 @@ export default function FormKalkulator({data, setData}){
                         </div>
 
                         <div className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
-                            flex-col md:flex-row wrap gap-5 lg:gap-15 mb-2">
+                            flex-col md:flex-row wrap gap-3 lg:gap-8 mb-2">
                             <input 
                                 type="checkbox" 
                                 name="tambahan" 
@@ -80,7 +80,7 @@ export default function FormKalkulator({data, setData}){
                         </div>
 
                         <div className="bg-[#f3f3f3] border-2 border-[#808080] rounded-xl px-8 py-3 w-full flex 
-                            flex-col md:flex-row wrap gap-5 lg:gap-15">
+                            flex-col md:flex-row wrap gap-3 lg:gap-8">
                             <input 
                                 type="checkbox" 
                                 name="tambahan" 
